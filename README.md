@@ -4,50 +4,50 @@ WaterGuard IoT is a comprehensive flood monitoring system prototype designed to 
 
 ## Table Of Contents
 
-- [Application Overview](#application-overview)
+- [Prototype Overview](#prototype-overview)
 - [Getting Started](#getting-started)
 - [Features](#features)
 - [Technologies](#technologies)
 - [Contributors](#contributors)
 
 ## Prototype Overview 
-WaterGuard IoT
+WaterGuard IoT is a our physical flood monitoring and alerting model that works in tandem with our WaterGuard application to provide real-time alerts to local communities when floods or dangerous water level rise is detected. WaterGuard IoT also streams data to our Firebase Realtime Database, which uses Google Cloud Platform to predict potential floods using machine learning and update our application accordingly. Built with the NodeMCU ESP32 which can be expanded to the ESP32 SIM800L, WaterGuard IoT is able to connect to the Internet for streaming data either by using Wi-Fi or even celular connection. The model also utilzes Arduino compatible components such as the ultrosonic sensor to detect water levels, alerting buzer and a TP4056 Battery Charger and Solar Panel to ensure our model is continuosly powered. For the housing of our IoT model, we used weatherproof, waterproof and Ingress Protection standard materials which aligns with our use case of being exposed to extreme weather such as high tempreatures, rain and placed in an actively flowing water source. Some materials used for our housing are such as an IP67 Junction Box which houses all of our electronic components including the microcontroller and an PVC Class D pipe which houses the ultronic sensor and acts as a stand in the flowing water source.
 
-WaterGuard is a pioneering mobile application that is meticulously designed to proactively respond to flood risks, fostering a sense of unity and support in times of crisis. WaterGuard offers a range of features to achieve this mission. Our cutting-edge quick real-time notifications about potential flood risks, ensuring users stay informed and prepared. The core feature of WaterGuard is its advanced alert system that leverages sophisticated weather data and flood risk assessments to notify users about potential flooding in their area. Through push notifications and timely updates, users can make informed decisions to protect themselves and their property. One of WaterGuard's standout features is its emergency services functionality, utilizing an ad hoc network for communication. In the event of network disruptions or overloaded communication channels during a flood, WaterGuard establishes a decentralized network among nearby users. This ad hoc network ensures that emergency messages can be relayed even in challenging communication environments, facilitating swift and effective response efforts.
+Components :
+1 x NodeMCU ESP32 / ESP32 SIM800L
+1 x SR04P Ultrasonic Ranging Module
+1 x I2C 1602 Serial LCD
+1 x 16.5x5.5 Breadboard
+14 x 10cm Jumper Cables
 
-The technological foundation of WaterGuard is equally robust, utilizing Flutter for seamless front-end development and Cloud Firestore for a sturdy back-end architecture. Through strategic integration of APIs and external libraries, we enhance the user experience while optimizing costs.
+![flood managment system (1)](https://github.com/nickchan01/WaterGuard/assets/148427518/fc02017b-2fd4-41f7-8260-3e733661ccca)
 
 
 ## Getting Started
+#This will only work with similarly built projects!
 
-1. Download the source code folder and unzip 
-2. Open the source code folder on your preferred IDE (Visual Studio Code Recommended)
-3. Run the source code on any physical/virtual device, [online documentation](https://www.fluttercampus.com/tutorial/4/run-first-application/)
-4. Start navigating and using the application's features.
+1. Create the project using components listed
+2. Download the source code folder and unzip 
+3. Open the source code folder on your preferred IDE (Arduino IDE Recommended)
+4. Insert Firebase API key and URL
+5. Insert Wi-Fi SSID and password
+6. Upload the code to the NodeMCU ESP32 and run 
 
 ## Features
-
-- Seamless Sign-Up / Login With Firebase Auth
-- Flood Risk Mapping
-- Community and Forum
-- Ad Hoc Emergency Service
-- Donation & Volunteer Service Page
+- Water Level Monitoring
+- Dangerous Water Rise Alerting
+- Flood Alerting
+- Flood Prediction
 
 ## Technologies
 
-External Packages and Dependencies:
-- [Cupertino Icons](https://pub.dev/packages/cupertino_icons) - Version: ^1.0.2
-- [Smooth Page Indicator](https://pub.dev/packages/smooth_page_indicator) - Version: ^1.1.0
-- [Firebase Core](https://pub.dev/packages/firebase_core) - Version: ^2.15.0
-- [Google Maps Flutter](https://pub.dev/packages/google_maps_flutter) - Version: ^2.4.0
-- [Geolocator](https://pub.dev/packages/geolocator) - Version: ^8.2.1
-- [Image](https://pub.dev/packages/image) - Version: ^3.2.2
-- [Cloud Firestore](https://pub.dev/packages/cloud_firestore) - Version: ^4.8.4
-- [Firebase Auth](https://pub.dev/packages/firebase_auth) - Version: ^4.7.2
-- [Google Sign In](https://pub.dev/packages/google_sign_in) - Version: ^6.1.4
-- [Provider](https://pub.dev/packages/provider) - Version: ^6.0.5
-- [Firebase Storage](https://pub.dev/packages/firebase_storage) - Version: ^11.2.5
-- [Geocoding](https://pub.dev/packages/geocoding) - Version: ^2.1.0
+Libraries, Packages and Dependencies:
+- [EEPROM Library](https://docs.arduino.cc/learn/built-in-libraries/eeprom/)
+- [Wire Library](https://www.arduino.cc/reference/en/language/functions/communication/wire/)
+- [LiquidCrystal I2C Library](https://www.arduino.cc/reference/en/libraries/liquidcrystal-i2c/)
+- [Software Serial Library](https://docs.arduino.cc/learn/built-in-libraries/software-serial/)
+- [WiFi Library](https://www.arduino.cc/reference/en/libraries/wifi/)
+- [Firebase Arduino Client Library for ESP8266 and ESP32 Library](https://www.arduino.cc/reference/en/libraries/firebase-arduino-client-library-for-esp8266-and-esp32/)
 
 
 ## Contributors 
